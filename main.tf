@@ -7,7 +7,7 @@ resource "aws_security_group" "main" {
     var.sg_tags,       # Custom VPC tags passed via variables
     local.common_tags, # Common tags like environment, project name, etc.
     {
-      Name = "${local.common_name_suffix}-${local.var.sg_name}" # Example: roboshop-dev-catalogue
+      Name = "${local.common_name_suffix}-${var.sg_name}" # Example: roboshop-dev-catalogue
     }
   )
 }
